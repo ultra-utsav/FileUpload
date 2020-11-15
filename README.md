@@ -1,4 +1,3 @@
-#FileUpload
 
 # What it does?
 FileUpload does makes possible to resumable upload big files. User can pause/resume/cancel upload.
