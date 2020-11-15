@@ -9,8 +9,8 @@ As it provides functionality of cancel current upload, If user upload a wrong fi
 
 # How to setup with Docker?
 
-Step 1 : Clone this Repository with url : https://github.com/ultra-utsav/FileUpload.git
-         git clone https://github.com/ultra-utsav/FileUpload.git
+1.Clone this Repository with url : https://github.com/ultra-utsav/FileUpload.git  
+git clone https://github.com/ultra-utsav/FileUpload.git
 
 Step 2 : Create Docker image (cmd: "docker build -t file-upload .").
 
