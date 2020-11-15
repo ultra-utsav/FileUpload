@@ -8,19 +8,37 @@ As it provides functionality of cancel current upload, If user upload a wrong fi
 
 # How to setup with Docker?
 
-Step 1 : Clone this Repository (cmd:  "git clone https://github.com/ultra-utsav/FileUpload.git")    
+Step 1 : Clone this Repository 
+```
+git clone https://github.com/ultra-utsav/FileUpload.git
+```
 
-Step 2 : Create Docker image (cmd: "docker build -t file-upload .").
+Step 2 : Create Docker image 
+```
+(cmd: "docker build -t file-upload .").
+```
 
-Step 3 : You have docker image. check with (cmd: "docker images").
+Step 3 : You have docker image. check with 
+```
+(cmd: "docker images").
+```
 
-Step 4 : Run your docker image and that is call docker container.(cmd: "docker run -d -p PORT_U_WANT:8000 file-upload").
+Step 4 : Run your docker image and that is call docker container.
+```
+(cmd: "docker run -d -p PORT_U_WANT:8000 file-upload").
+```
 
-Step 5 : Instance is running on https://localhost:PORT_U_WANT/
+Step 5 : Instance is running on ```https://localhost:PORT_U_WANT/```
 
-Step 6 : Find Container ID (cmd: "docker ps") 
+Step 6 : Find Container ID 
+```
+(cmd: "docker ps") 
+```
 
-Step 7 : Stop running (cmd: "docker container stop CONTAINER_ID")
+Step 7 : Stop running 
+```
+(cmd: "docker container stop CONTAINER_ID")
+```
 
 
 
