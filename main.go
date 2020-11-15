@@ -5,8 +5,8 @@ import (
 
 	"github.com/rs/cors"
 
-	"./handler"
 	"github.com/gorilla/mux"
+	"github.com/ultra-utsav/FileUpload.git/handler"
 )
 
 func main() {
