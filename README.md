@@ -62,5 +62,13 @@ docker exec -it <container name> <command>
 
 Step 4 : In ```./files``` where all uploaded files will be there if not uploaded any files then there is no folder with ```files```.
 
+# Techstack
+
+1. Golang for backend routing.
+2. Resumable.js for dividing whole file into chunks and send to backend.
+3. HTML/CSS.
+4. Docker.
+
+
 
 
