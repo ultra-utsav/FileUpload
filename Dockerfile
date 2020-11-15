@@ -12,8 +12,11 @@ RUN go mod download
 
 COPY . .
 
-RUN go build
+RUN go build -o main .
 
-CMD ["./FileUpload.git.exe"]
+EXPOSE 8000
+
+CMD ["./main"]
 
 CMD tail -f /dev/null
+

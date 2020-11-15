@@ -18,11 +18,16 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 
 // ResumableUpload handles reumable uploads
 func ResumableUpload(w http.ResponseWriter, r *http.Request) {
-	tempFolder := "./files/"
+	tempFolder := "./files"
 
 	query := r.URL.Query()
 	resumableIdentifier, _ := query["resumableIdentifier"]
-	filePath := fmt.Sprintf("%s%s", tempFolder, resumableIdentifier[0])
+
+	if _, err := os.Stat(tempFolder); os.IsNotExist(err) {
+		os.Mkdir(tempFolder, os.ModePerm)
+	}
+
+	filePath := fmt.Sprintf("%s/%s", tempFolder, resumableIdentifier[0])
 
 	er := r.ParseMultipartForm(32 << 20)
 

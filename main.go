@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/rs/cors"
@@ -22,5 +23,6 @@ func main() {
 	handler := cors.Default().Handler(r)
 
 	// listening on port 8000
+	log.Println("Starting server...")
 	http.ListenAndServe(":8000", handler)
 }
