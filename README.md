@@ -15,29 +15,29 @@ git clone https://github.com/ultra-utsav/FileUpload.git
 
 Step 2 : Create Docker image 
 ```
-(cmd: "docker build -t file-upload .").
+docker build -t file-upload .
 ```
 
 Step 3 : You have docker image. check with 
 ```
-(cmd: "docker images").
+docker images
 ```
 
 Step 4 : Run your docker image and that is call docker container.
 ```
-(cmd: "docker run -d -p PORT_U_WANT:8000 file-upload").
+docker run -d -p PORT_U_WANT:8000 file-upload
 ```
 
 Step 5 : Instance is running on ```https://localhost:PORT_U_WANT/```
 
 Step 6 : Find Container ID 
 ```
-(cmd: "docker ps") 
+docker ps
 ```
 
 Step 7 : Stop running 
 ```
-(cmd: "docker container stop CONTAINER_ID")
+docker container stop CONTAINER_ID
 ```
 
 
@@ -45,13 +45,22 @@ Step 7 : Stop running
 # Where Uploaded files stored in docker?
 It can be find using applying SSH into a running docker container.
 
-Step 1 : Find Name of current running container. (cmd : "docker ps").    
+Step 1 : Find Name of current running container. 
+```
+docker ps   
+```
 
-Step 2 : Get get a bash shell in the container (cmd: "docker exec -it <container name> /bin/bash").
+Step 2 : Get get a bash shell in the container 
+```
+docker exec -it <container name> /bin/bash
+```
 
-Step 3 : You can run any command here like (cmd: "docker exec -it <container name> <command>").
+Step 3 : You can run any command here like 
+```
+docker exec -it <container name> <command>
+```
 
-Step 4 : In ./files where all uploaded files will be there if not uploaded any files then there is no folder with "files".
+Step 4 : In ```./files``` where all uploaded files will be there if not uploaded any files then there is no folder with ```files```.
 
 
 
