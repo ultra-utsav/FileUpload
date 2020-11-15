@@ -12,6 +12,7 @@ import (
 //IndexHandler to render html file
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("index.html")
+
 	er := t.Execute(w, nil)
 
 	if er != nil {
@@ -23,6 +24,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 func ResumableUpload(w http.ResponseWriter, r *http.Request) {
 	tempFolder := "./files"
 
+	//check if files folder exists or not, if not create it
 	if _, err := os.Stat(tempFolder); os.IsNotExist(err) {
 		os.Mkdir(tempFolder, os.ModePerm)
 	}
@@ -32,6 +34,7 @@ func ResumableUpload(w http.ResponseWriter, r *http.Request) {
 
 	filePath := fmt.Sprintf("%s/%s", tempFolder, resumableIdentifier[0])
 
+	//parse multipart form :: 32 << 20 max 32 mb each chunk file size
 	er := r.ParseMultipartForm(32 << 20)
 
 	if er != nil {
@@ -48,6 +51,7 @@ func ResumableUpload(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// file is chunk file from request
 	file, _, er := r.FormFile("file")
 
 	if er != nil {
@@ -57,6 +61,7 @@ func ResumableUpload(w http.ResponseWriter, r *http.Request) {
 
 	defer file.Close()
 
+	//f is final file which combines all chunk file
 	f, err := os.OpenFile(filePath, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
 
 	if err != nil {
