@@ -13,19 +13,22 @@ import (
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("index.html")
 	er := t.Execute(w, nil)
-	log.Print(er)
+
+	if er != nil {
+		log.Fatal("Error in rendering index webpage, ", er.Error())
+	}
 }
 
 // ResumableUpload handles reumable uploads
 func ResumableUpload(w http.ResponseWriter, r *http.Request) {
 	tempFolder := "./files"
 
-	query := r.URL.Query()
-	resumableIdentifier, _ := query["resumableIdentifier"]
-
 	if _, err := os.Stat(tempFolder); os.IsNotExist(err) {
 		os.Mkdir(tempFolder, os.ModePerm)
 	}
+
+	query := r.URL.Query()
+	resumableIdentifier, _ := query["resumableIdentifier"]
 
 	filePath := fmt.Sprintf("%s/%s", tempFolder, resumableIdentifier[0])
 
@@ -68,7 +71,5 @@ func ResumableUpload(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("Error in appending data in file, ", er.Error())
 	}
 
-	f.Close()
-
-	log.Println("Total written bytes: ", written)
+	log.Printf("ChunkNumber : %v , Total written bytes: %v", query["resumableChunkNumber"][0], written)
 }

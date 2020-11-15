@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20201111T093000Z
+DTEND:20201111T100000Z
+DTSTAMP:20201110T153159Z
+ORGANIZER;CN=dharmik@atlan.com:mailto:dharmik@atlan.com
+UID:a99t7rnf1q3vlgsfssm3uv0i54@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=utsav.r.vaghani@gmail.com;X-NUM-GUESTS=0:mailto:utsav.r.vaghani@gmail.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dharmik@atlan.com;X-NUM-GUESTS=0:mailto:dharmik@atlan.com
+X-MICROSOFT-CDO-OWNERAPPTID:-606201010
+CREATED:20201110T153156Z
+DESCRIPTION:Event Name: 30 Minute Meeting\n\nPlease let me know a convenien
+ t number I can call. : 8780469234\n\nNeed to make changes to this event?\nC
+ ancel: https://calendly.com/cancellations/CERQ5BIKI6VJ2EBB\nReschedule: htt
+ ps://calendly.com/reschedulings/CERQ5BIKI6VJ2EBB\n\nPowered by Calendly.com
+ \n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~::~:~::-\nPlease do not edit this section of the description.\n\n
+ View your event at https://calendar.google.com/calendar/event?action=VIEW&e
+ id=YTk5dDdybmYxcTN2bGdzZnNzbTN1djBpNTQgdXRzYXYuci52YWdoYW5pQG0&tok=MTcjZGhh
+ cm1pa0BhdGxhbi5jb20yMDg3ODFjNjM2ZjIzNTgxMzhmZDU4ZjIwMDk2YzIxMGY0ZTRiNDA2&ct
+ z=Asia%2FKolkata&hl=en&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20201110T153157Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Utsav Vaghani and Dharmik Gohel
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
