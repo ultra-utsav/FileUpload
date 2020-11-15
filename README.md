@@ -1,6 +1,6 @@
 
 # What it does?
-FileUpload does makes possible to resumable upload big files. User can pause/resume/cancel upload.
+FileUpload does make it possible to resumable upload big files. User can pause/resume/cancel upload.
 
 # What is use of FileUpload?
 As it provides functionality of cancel current upload, If user upload a wrong file and any instant of time user get realized then user can cancel current uploading of file.
