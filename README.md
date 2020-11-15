@@ -1,15 +1,15 @@
 # FileUpload
 
-# what it does?
+# What it does?
 FileUpload does makes possible to resumable upload big files. User can pause/resume/cancel upload.
 
-# what is use of FileUpload?
+# What is use of FileUpload?
 As it provides functionality of cancel current upload, If user upload a wrong file and any instant of time user get realized then user can cancel current uploading of file.
 
 
 # How to setup with Docker?
 
-Step 1 : clone this Repository with url : 
+Step 1 : Clone this Repository with url : https://github.com/ultra-utsav/FileUpload.git
 
 Step 2 : Create Docker image (cmd: "docker build -t file-upload .").
 
